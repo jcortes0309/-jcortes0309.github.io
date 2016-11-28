@@ -22,17 +22,31 @@ body, html {
 }
 
 .navbar.container {
-  color: white;
+  color: #FFF;
 }
 
+/*Not currently used
 .navbar-brand {
   padding: 0;
+}*/
+
+.video-section span {
+  font-size: 1.5rem;
+  color: #000;
+  background-color: #FFF;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
 /* Navbar image and personal information */
 
 img {
-  width: 48px;
+  width: 36px;
   margin-right: 15px;
   border-radius: 50%;
 }
@@ -44,10 +58,15 @@ p {
 }
 
 p span {
-  color: #fff;
+  color: #FFF;
   font-size: 2.5rem;
   font-weight: bolder;
   letter-spacing: -1px;
+}
+
+.page-scroll {
+  color: #FFF;
+  font-size: 1.5rem;
 }
 
 /* Scroll To Sections
@@ -64,23 +83,24 @@ p span {
 
 .intro-section {
   padding-top: 150px;
-  background: #fff;
+  background: #FFF;
 }
 
 .about-section {
   padding-top: 150px;
-  background: #eee;
+  background: #EEE;
 }
 
 .portfolio-section {
   padding-top: 150px;
-  background: #fff;
+  background: #FFF;
 }
 
 .contact-section {
   padding-top: 150px;
-  background: #eee;
+  background: #EEE;
 }
+
 
 
 /*
@@ -106,21 +126,21 @@ p span {
 h1.video-text {
   position: relative;
   top: 25%;
-  color: white;
+  color: #FFF;
   font: 4rem/1.25 'Chonburi', cursive;
 }
 
 h4.video-text {
   position: relative;
   top: 25%;
-  color: white;
+  color: #FFF;
   font: 1.5rem/1.25 'Chonburi', cursive;
 }
 
 a.video-text {
   border-radius: 300px;
   background-color: green;
-  color: white;
+  color: #FFF;
   border: none;
   font-size: 1.5rem;
   margin-top: 65%;
@@ -137,21 +157,32 @@ a.video-text {
 
 .btn-dark {
     border-radius: 0;
-    color: #fff;
+    color: #FFF;
     background-color: rgba(0,0,0,0.4);
 }
 
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
-    color: #fff;
+    color: #FFF;
     background-color: rgba(0,0,0,0.7);
 }
 
 button.navbar-toggle {
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #FFF;
+  color: #FFF;
   font-size: small;
+}
+
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  padding: 7px 16px;
+  border-radius: 100%;
+}
+
+.fa-angle-double-down {
+  font-size: 3rem;
 }
 
 /*@media screen and (max-device-width: 800px) {*/
@@ -193,12 +224,21 @@ button.navbar-toggle {
   h4.video-text {
     position: relative;
     top: 30%;
-    color: white;
+    color: #FFF;
     font: 1.5rem/1.25 'Chonburi', cursive;
   }
 
   a.video-text {
     margin-top: 50%;
+  }
+
+  .btn-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .fa-angle-double-down {
+    font-size: 4.5rem;
   }
 }
 
@@ -215,6 +255,10 @@ button.navbar-toggle {
     padding: 0 0 10px 0;
   }
 
+  img {
+    width: 48px;
+  }
+
   h1.video-text {
     top: 30%;
     font: 6rem/1.25 'Chonburi', cursive;
@@ -223,12 +267,26 @@ button.navbar-toggle {
   h4.video-text {
     position: relative;
     top: 30%;
-    color: white;
+    color: #FFF;
     font: 2rem/1.25 'Chonburi', cursive;
   }
 
   a.video-text {
     margin-top: 35%;
+  }
+
+  .btn-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .fa-angle-double-down {
+    font-size: 6rem;
+  }
+
+  .page-scroll {
+    color: #FFF;
+    font-size: 2rem;
   }
  }
 
@@ -249,3 +307,54 @@ button.navbar-toggle {
      margin-top: 25%;
    }
  }
+
+/*
+ * Sidebar Navigation
+ */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 5px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s
+}
+
+.sidenav a:hover {
+  color: #000;
+  background-color: #FFF;
+}
+
+.sidenav a.active {
+  color: #000;
+  background-color: #FFF;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 3rem;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 1.8rem;
+  }
+}
