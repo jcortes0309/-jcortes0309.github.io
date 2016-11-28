@@ -25,15 +25,22 @@ body, html {
   color: #FFF;
 }
 
+/*Not currently used
 .navbar-brand {
   padding: 0;
-}
+}*/
 
-nav.sidebar, .main{
-  -webkit-transition: margin 200ms ease-out;
-  -moz-transition: margin 200ms ease-out;
-  -o-transition: margin 200ms ease-out;
-  transition: margin 200ms ease-out;
+.video-section span {
+  font-size: 1.5rem;
+  color: #000;
+  background-color: #FFF;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
 /* Navbar image and personal information */
@@ -93,6 +100,7 @@ p span {
   padding-top: 150px;
   background: #EEE;
 }
+
 
 
 /*
@@ -299,3 +307,54 @@ button.navbar-toggle {
      margin-top: 25%;
    }
  }
+
+/*
+ * Sidebar Navigation
+ */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 5px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s
+}
+
+.sidenav a:hover {
+  color: #000;
+  background-color: #FFF;
+}
+
+.sidenav a.active {
+  color: #000;
+  background-color: #FFF;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 3rem;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 1.8rem;
+  }
+}

@@ -18,46 +18,49 @@
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-            Menu <i class="fa fa-bars"></i>
-          </button>
-          <a class="navbar-brand page-scroll" href="#page-top">
-            <p>
-              <img src="images/profile_pic.jpg" alt="Juan Cortes pic" />
-              <!-- <span>Juan A Cortes</span> -->
-            </p>
-          </a>
-        </div>
+      <!-- Navigation -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <nav class="navbar navbar-custom" role="navigation">
+        <div id="nav" class="container menu">
+          <!-- <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+              Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">
+              <p>
+                <img src="images/profile_pic.jpg" alt="Juan Cortes pic" />
+              </p>
+            </a>
+          </div> -->
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-          <ul class="nav navbar-nav">
-            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-            <li class="hidden">
-              <a class="page-scroll" href="#page-top"></a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#intro">Intro</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#about">About</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-              <a class="page-scroll" href="#contact">Contact</a>
-            </li>
-          </ul>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <!-- <div class="collapse navbar-collapse navbar-right navbar-main-collapse"> -->
+            <!-- <ul class="nav navbar-nav"> -->
+              <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+              <!-- <li class="hidden"> -->
+                <a class="hidden page-scroll" href="#page-top"></a>
+              <!-- </li> -->
+                <a class="page-scroll active" onclick="closeNav()" href="#page-top">Home</a>
+              <!-- <li> -->
+                <a class="page-scroll" onclick="closeNav()" href="#intro">Intro</a>
+              <!-- </li> -->
+              <!-- <li> -->
+                <a class="page-scroll" onclick="closeNav()" href="#about">About</a>
+              <!-- </li> -->
+              <!-- <li> -->
+                <a class="page-scroll" onclick="closeNav()" href="#portfolio">Portfolio</a>
+              <!-- </li> -->
+              <!-- <li> -->
+                <a class="page-scroll" onclick="closeNav()" href="#contact">Contact</a>
+              <!-- </li> -->
+            <!-- </ul> -->
+          <!-- </div> -->
+          <!-- /.navbar-collapse -->
         </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container -->
-    </nav>
+        <!-- /.container -->
+      </nav>
+    </div>
 
     <!-- Video Section -->
     <section id="video" class="video-section text-center">
@@ -65,6 +68,7 @@
         <source src="videos/Love-Coding.webm" type="video/webm">
         <source src="videos/Love-Coding.mp4" type="video/mp4">
       </video>
+      <span onclick="openNav()">&#9776; MENU</span>
       <h1 class="video-text">I'm Juan A Cortes</h1>
       <h4 class="video-text">Full-stack Development Student</h4>
       <a class="btn btn-circle page-scroll video-text" href="#intro"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
