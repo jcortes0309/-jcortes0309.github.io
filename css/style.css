@@ -74,30 +74,30 @@ p span {
  */
 
 .video-section,
-.intro-section,
 .about-section,
+.experience-section,
 .portfolio-section,
 .contact-section {
   height: 100%;
 }
 
-.intro-section {
-  padding-top: 150px;
-  background: #FFF;
-}
-
 .about-section {
-  padding-top: 150px;
+  padding-top: 15px;
   background: #EEE;
 }
 
+.experience-section {
+  padding-top: 15px;
+  background: #FFF;
+}
+
 .portfolio-section {
-  padding-top: 150px;
+  padding-top: 15px;
   background: #FFF;
 }
 
 .contact-section {
-  padding-top: 150px;
+  padding-top: 15px;
   background: #EEE;
 }
 
