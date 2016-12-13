@@ -1,142 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Juan A Cortes - Full Stack Development Student</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Link to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=BioRhyme|Chonburi|Oswald:300,400|Vast+Shadow|Yeseva+One" rel="stylesheet">
 
-    <!-- CDN to Font Awesome 4.6.3 -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <title>Juan A Cortes - Full Stack Development Student</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Link to Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=BioRhyme|Chonburi|Oswald:300,400|Vast+Shadow|Yeseva+One" rel="stylesheet">
+  <!-- CDN to Font Awesome 4.6.3 -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <!-- Devicon Icons (programming languages) -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Personal CSS -->
+  <link rel="stylesheet" href="css/style.css">
 
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body ng-app="personal_site">
 
-      <!-- Navigation -->
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <nav class="navbar navbar-custom" role="navigation">
-        <div id="nav" class="container menu">
-          <!-- <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-              Menu <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top">
-              <p>
-                <img src="images/profile_pic.jpg" alt="Juan Cortes pic" />
-              </p>
-            </a>
-          </div> -->
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <!-- <div class="collapse navbar-collapse navbar-right navbar-main-collapse"> -->
-            <!-- <ul class="nav navbar-nav"> -->
-              <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-              <!-- <li class="hidden"> -->
-          <a class="hidden page-scroll" href="#page-top"></a>
-              <!-- </li> -->
-          <a class="page-scroll home active" onclick="closeNav()" href="#page-top">Home</a>
-              <!-- <li> -->
-          <a class="page-scroll about" onclick="closeNav()" href="#about">About</a>
-              <!-- </li> -->
-              <!-- <li> -->
-          <a class="page-scroll experience" onclick="closeNav()" href="#experience">Experience</a>
-              <!-- </li> -->
-              <!-- <li> -->
-          <a class="page-scroll portfolio" onclick="closeNav()" href="#portfolio">Portfolio</a>
-              <!-- </li> -->
-              <!-- <li> -->
-          <a class="page-scroll contact" onclick="closeNav()" href="#contact">Contact</a>
-              <!-- </li> -->
-            <!-- </ul> -->
-          <!-- </div> -->
-          <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-      </nav>
+  <nav class="navbar navbar-inverse navbar-fixed-top hidden-sm hidden-md hidden-lg">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Juan A Cortes</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a ui-sref="home">About<span class="sr-only">(current)</span> &nbsp;<i class="fa fa-home fa-fw" aria-hidden="true"></i></a></li>
+          <li class="hidden-xs"><a href="#">&#124;</a></li>
+          <li><a ui-sref="experience">Experience &nbsp;<i class="fa fa-user fa-fw" aria-hidden="true"></i></a></li>
+          <li class="hidden-xs"><a href="#">&#124;</a></li>
+          <li><a ui-sref="portfolio">Portfolio &nbsp;<i class="fa fa-th fa-fw" aria-hidden="true"></i></a></li>
+          <li class="hidden-xs"><a href="#">&#124;</a></li>
+          <li><a ui-sref="contact">Contact &nbsp;<i class="fa fa-envelope fa-fw" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <!-- Video Section -->
-    <section id="video" class="video-section text-center">
-      <video playsinline autoplay muted loop poster="images/Love-Coding.jpg" id="bg-video">
-        <source src="videos/Love-Coding.webm" type="video/webm">
-        <source src="videos/Love-Coding.mp4" type="video/mp4">
-      </video>
-      <span onclick="openNav()">&#9776; MENU</span>
-      <h1 class="video-text">I'm Juan A Cortes</h1>
-      <h4 class="video-text">Full-stack Development Student</h4>
-      <a class="btn btn-circle page-scroll video-text" href="#about"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1>About Section</h1>
-          </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-3 col-lg-2 sidebar text-right">
+        <div ui-sref="home" class="personal-info">
+          <img src="images/profile_pic.jpg" alt="Juan Cortes profile picture" />
+          <p>
+            <span>Juan A Cortes</span><br>Full-stack Developement Student
+          </p>
         </div>
-      </div>
-    </section>
+        <ul class="nav nav-sidebar">
+          <li class="active"><a ui-sref="home">About<span class="sr-only">(current)</span> &nbsp;<i class="fa fa-home fa-fw" aria-hidden="true"></i></a></li>
+          <li><a ui-sref="experience">Experience &nbsp;<i class="fa fa-user fa-fw" aria-hidden="true"></i></a></li>
+          <li><a ui-sref="portfolio">Portfolio &nbsp;<i class="fa fa-th fa-fw" aria-hidden="true"></i></a></li>
+          <li><a ui-sref="contact">Contact &nbsp;<i class="fa fa-envelope fa-fw" aria-hidden="true"></i></a></li>
+        </ul>
+      </div><!-- /.col-sm-3 col-md-2 sidebar text-right -->
+      <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-10 col-lg-offset-2 main">
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1>Experience Section</h1>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio-section text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1>Portfolio Section</h1>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1>Contact Section</h1>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <a id="to-top" href="#page-top" class="btn btn-dark btn-lg page-scroll">
-        <i class="fa fa-chevron-up fa-fw fa-1x"></i>
-      </a>
-    </footer>
+        <!-- portal to ui-router -->
+        <ui-view></ui-view>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      </div><!-- /.col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main-->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!-- Scrolling Nav JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!-- Custom JavaScript -->
-    <script type="text/javascript" src="js/custom.js"></script>
-  </body>
+  <!-- Angular CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+
+
+  <script src="js/personal.js"></script>
+</body>
+
 </html>

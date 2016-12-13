@@ -3,358 +3,209 @@
  */
 
  /* Base font size to use throughout the whole site. */
-html {
-  font-size: 10px;
+ html {
+   font-size: 10px;
+ }
+
+ body {
+   font-size: 1.6rem;
+   font-family: 'BioRhyme', Georgia, serif;
+ }
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+@media (max-width: 768px) {
+  body {
+    padding-top: 50px;
+  }
 }
 
-body {
-  font-size: 1.6rem;
+/* Move up sidebar when viewing in sm, md and lg */
+@media (min-width: 768px) {
+  .row .sidebar {
+    top: 0;
+  }
 }
-
-body, html {
-    width: 100%;
-    height: 100%;
-}
-
-.navbar-custom {
-  background-color: #000;
-  font: 2rem/1.25 'BioRhyme', Georgia, serif;
-}
-
-.navbar.container {
-  color: #FFF;
-}
-
-/*Not currently used
-.navbar-brand {
-  padding: 0;
-}*/
-
-.video-section span {
-  font-size: 1.5rem;
-  color: #000;
-  background-color: #FFF;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  border: 1px solid #000;
-  border-radius: 10px;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-/* Navbar image and personal information */
-
-img {
-  width: 36px;
-  margin-right: 15px;
-  border-radius: 50%;
-}
-
-p {
-  color: #9D9D9D;
-  font: 1.5rem/1.25 'BioRhyme', Georgia, serif;
-  margin: 8px 0 10px;
-}
-
-p span {
-  color: #FFF;
-  font-size: 2.5rem;
-  font-weight: bolder;
-  letter-spacing: -1px;
-}
-
-.page-scroll {
-  color: #FFF;
-  font-size: 1.5rem;
-}
-
-/* Scroll To Sections
- *
- */
-
-.video-section,
-.about-section,
-.experience-section,
-.portfolio-section,
-.contact-section {
-  height: 100%;
-}
-
-.about-section {
-  padding-top: 15px;
-  background: #EEE;
-}
-
-.experience-section {
-  padding-top: 15px;
-  background: #FFF;
-}
-
-.portfolio-section {
-  padding-top: 15px;
-  background: #EEE;
-}
-
-.contact-section {
-  padding-top: 15px;
-  background: #FFF;
-}
-
 
 
 /*
- * Video Background
+ * Global add-ons
  */
 
- #bg-video {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: auto;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -100;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  background: transparent url(../images/Love-Coding.jpg) no-repeat;
-  background-size: cover;
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #EEE;
 }
 
-h1.video-text {
-  position: relative;
-  top: 25%;
-  color: #FFF;
-  font: 4rem/1.25 'Chonburi', cursive;
+/*
+ * Top navigation
+ */
+.navbar {
+  background-color: #222; /*Change to #000 later */
+  font: 2rem/1.25 'BioRhyme', Georgia, serif;
 }
 
-h4.video-text {
-  position: relative;
-  top: 25%;
-  color: #FFF;
-  font: 1.5rem/1.25 'Chonburi', cursive;
+div.navbar-header a.navbar-brand {
+  color: white;
 }
 
-a.video-text {
-  border-radius: 300px;
-  background-color: green;
-  color: #FFF;
-  border: none;
-  font-size: 1.5rem;
-  margin-top: 65%;
+.navbar-fixed-top {
+  border: 1px solid #000;
 }
 
-#to-top {
-  /*display: none;*/
-  position: fixed;
-  bottom: 5px;
-  right: 5px;
+/* Affects top navigation only */
+.nav > li > a {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-/* Custom Button Styles */
-
-.btn-dark {
-    border-radius: 0;
-    color: #FFF;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.btn-dark:hover,
-.btn-dark:focus,
-.btn-dark:active {
-    color: #FFF;
-    background-color: rgba(0,0,0,0.7);
-}
-
-button.navbar-toggle {
-  border: 1px solid #FFF;
-  color: #FFF;
-  font-size: small;
-}
-
-.btn-circle {
-  width: 50px;
-  height: 50px;
-  padding: 7px 16px;
-  border-radius: 100%;
-}
-
-.fa-angle-double-down {
-  font-size: 3rem;
-}
-
-/*@media screen and (max-device-width: 800px) {*/
-@media(max-width: 800px) {
-
-  #video {
-    background: url(../images/Love-Coding.jpg) #000 no-repeat center center fixed;
-  }
-  #bgvid {
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .pipe {
     display: none;
   }
 }
 
 
 /*
- * Media Queries
+ * Sidebar
  */
 
-@media(min-width: 319px) {
-  .navbar-brand img {
-    margin-left: 20%;
-  }
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
 
-  h1.video-text {
-    font: 3rem/1.25 'Chonburi', cursive;
-  }
-
-  a.video-text {
-    margin-top: 60%;
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #F5F5F5;
+    border-right: 1px solid #EEE;
   }
 }
 
-@media(min-width: 479px) {
-  h1.video-text {
-    top: 30%;
-    font: 4rem/1.25 'Chonburi', cursive;
-  }
-
-  h4.video-text {
-    position: relative;
-    top: 30%;
-    color: #FFF;
-    font: 1.5rem/1.25 'Chonburi', cursive;
-  }
-
-  a.video-text {
-    margin-top: 50%;
-  }
-
-  .btn-circle {
-    width: 60px;
-    height: 60px;
-  }
-
-  .fa-angle-double-down {
-    font-size: 4.5rem;
-  }
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
 }
 
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #9D9D9D;
+}
 
-@media(min-width: 767px) {
-  .navbar {
-    padding: 20px 0;
-    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-    transition: background .5s ease-in-out,padding .5s ease-in-out;
-  }
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #000;
+  background-color: #FFF;
+}
 
-  nav.top-nav-collapse {
-    padding: 0 0 10px 0;
-  }
+/* Sidebar decoration */
+.row .sidebar {
+  background-color: #000;
+}
 
-  img {
-    width: 48px;
-  }
+/* Sidebar image and personal information */
+.sidebar img {
+  height: 96px;
+  width: 96px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+}
 
-  h1.video-text {
-    top: 30%;
-    font: 6rem/1.25 'Chonburi', cursive;
-  }
+.sidebar p {
+  color: #9D9D9D;
+  font: 1.5rem/1.25 'BioRhyme', Georgia, serif;
+}
 
-  h4.video-text {
-    position: relative;
-    top: 30%;
-    color: #FFF;
-    font: 2rem/1.25 'Chonburi', cursive;
-  }
+.sidebar p span {
+  color: #FFF;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  letter-spacing: -1px;
+}
 
-  a.video-text {
-    margin-top: 35%;
-  }
+.sidebar ul {
+  font: 2rem/1.25 'BioRhyme', Georgia, serif;
+  margin-top: 45px;
+}
 
-  .btn-circle {
-    width: 70px;
-    height: 70px;
-  }
+.sidebar ul li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-  .fa-angle-double-down {
-    font-size: 6rem;
-  }
-
-  .page-scroll {
-    color: #FFF;
-    font-size: 2rem;
-  }
- }
-
-
- @media(min-width: 991px) {
-   h1.video-text {
-     top: 30%;
-     font: 8rem/1.25 'Chonburi', cursive;
-   }
-
-   h4.video-text {
-     position: relative;
-     top: 30%;
-     font: 2.5rem/1.25 'Chonburi', cursive;
-   }
-
-   a.video-text {
-     margin-top: 25%;
-   }
- }
 
 /*
- * Sidebar Navigation
+ * Main content
  */
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+.main {
+  padding: 20px;
 }
 
-.sidenav a {
-  padding: 5px;
-  text-decoration: none;
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+.main .page-header {
+  margin-top: 0;
+}
+
+h2 {
+  font: 3rem/1.25 'BioRhyme', Georgia, serif;
+}
+
+/*
+ * About page
+ */
+/* Image */
+.about-img {
   display: block;
-  transition: 0.3s
+  margin: auto;
+  max-width: 500px;
+  border-radius: 20px;
+  width: 100%;
 }
 
-.sidenav a:hover {
-  color: #000;
-  background-color: #FFF;
+[class^="devicon-"] {
+  display: inline-block;
+  font-size: 7rem;
+  margin: 15px;
 }
 
-.sidenav a.active {
-  color: #000;
-  background-color: #FFF;
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
 }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 3rem;
-  margin-left: 50px;
+.placeholders h4 {
+  margin-bottom: 0;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 1.8rem;
-  }
+.placeholder {
+  margin-bottom: 20px;
+}
+
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
 }
