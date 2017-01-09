@@ -189,6 +189,42 @@ h2 {
 }
 
 /*
+ * Experience page
+ */
+.logo {
+  height: 100px
+}
+
+.dc-logo {
+  width: 150px;
+}
+
+.coca-cola-logo {
+  width: 100px;
+}
+
+.accenture-logo {
+  width: 100px;
+}
+
+/*
+ * Contact page
+ */
+.contact-icon {
+  color: #000;
+}
+
+.contact-icon:hover {
+  color: #663399;
+}
+
+.contact {
+  padding: 25px;
+}
+
+
+
+/*
  * Placeholder dashboard ideas
  */
 
@@ -208,4 +244,46 @@ h2 {
 .placeholder img {
   display: inline-block;
   border-radius: 50%;
+}
+
+/*
+ * General styles
+ */
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+
+/*
+ * Media Queries
+ */
+ /* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  /* About Page */
+  .other {
+    margin-top: 75px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
 }
