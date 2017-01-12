@@ -182,6 +182,10 @@ h2 {
   width: 100%;
 }
 
+.about-column {
+  padding: 40px;
+}
+
 [class^="devicon-"] {
   display: inline-block;
   font-size: 7rem;
@@ -192,7 +196,7 @@ h2 {
  * Experience page
  */
 .logo {
-  height: 100px
+  height: 80px
 }
 
 .dc-logo {
@@ -263,7 +267,7 @@ h2 {
  /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   /* About Page */
-  .other {
+  .top-margin {
     margin-top: 75px;
   }
 }

@@ -9,7 +9,15 @@ $(document).on('click','.navbar-collapse.in',function(e) {
   }
 });
 
+
 var app = angular.module("personal_site", ['ui.router']);
+
+app.run(function($state) {
+ // Go to home page after the app is reloaded
+  window.onload = function() {
+    $state.go("home");
+  };
+});
 
 app.controller("HomeController", function($scope, $state) {
 
@@ -31,7 +39,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state({
     name: "experience",
     url: "/experience",
-    templateUrl: "../templates/experience.html"
+    templateUrl: "../templates/experience.html",
+    controller: "ExperienceController"
   })
   .state({
     name: "portfolio",
