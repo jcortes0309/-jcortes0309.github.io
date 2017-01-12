@@ -9,14 +9,34 @@ $(document).on('click','.navbar-collapse.in',function(e) {
   }
 });
 
+
 var app = angular.module("personal_site", ['ui.router']);
 
-app.controller("HomeController", function($scope, $state) {
-
+app.run(function($state, $rootScope, $location) {
+  // $rootScope.$on("$locationChangeStart", function(event, next, current) {
+  //
+  // if (next === current && next === "/experience")
+  //   event.preventDefault();
+  //   $state.go("home");
+  // });
 });
 
-app.controller("ExperienceController", function($scope, $state) {
+app.controller("HomeController", function($scope, $state, $rootScope, $location) {
+  $rootScope.$on('$locationChangeStart', function(event) {
+    $state.go('home');
+  });
+});
 
+app.controller("ExperienceController", function($scope, $state, $rootScope, $location) {
+  console.log("In the ExperienceController");
+  $rootScope.$on('$locationChangeStart', function(event, next, current) {
+    // $state.go("home");
+    if (!current) {
+      // $state.go("home");
+      console.log("I'm inside the if");
+    // handle session start event
+    }
+  });
 });
 
 
@@ -31,7 +51,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state({
     name: "experience",
     url: "/experience",
-    templateUrl: "../templates/experience.html"
+    templateUrl: "../templates/experience.html",
+    controller: "ExperienceController"
   })
   .state({
     name: "portfolio",
