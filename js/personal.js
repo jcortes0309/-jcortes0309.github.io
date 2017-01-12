@@ -12,31 +12,19 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 
 var app = angular.module("personal_site", ['ui.router']);
 
-app.run(function($state, $rootScope, $location) {
-  // $rootScope.$on("$locationChangeStart", function(event, next, current) {
-  //
-  // if (next === current && next === "/experience")
-  //   event.preventDefault();
-  //   $state.go("home");
-  // });
+app.run(function($state) {
+ // Go to home page after the app is reloaded
+  window.onload = function() {
+    $state.go("home");
+  };
 });
 
-app.controller("HomeController", function($scope, $state, $rootScope, $location) {
-  $rootScope.$on('$locationChangeStart', function(event) {
-    $state.go('home');
-  });
+app.controller("HomeController", function($scope, $state) {
+
 });
 
-app.controller("ExperienceController", function($scope, $state, $rootScope, $location) {
-  console.log("In the ExperienceController");
-  $rootScope.$on('$locationChangeStart', function(event, next, current) {
-    // $state.go("home");
-    if (!current) {
-      // $state.go("home");
-      console.log("I'm inside the if");
-    // handle session start event
-    }
-  });
+app.controller("ExperienceController", function($scope, $state) {
+
 });
 
 
