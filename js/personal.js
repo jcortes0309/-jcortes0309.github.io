@@ -15,7 +15,7 @@ var app = angular.module("personal_site", ['ui.router']);
 app.run(function($state) {
  // Go to home page after the app is reloaded
   window.onload = function() {
-    $state.go("home");
+    // $state.go("home");
   };
 });
 

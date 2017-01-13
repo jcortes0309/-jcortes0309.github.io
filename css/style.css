@@ -232,7 +232,9 @@ h2 {
  * Placeholder dashboard ideas
  */
 
-.placeholders {
+/*MIGHT DELETE LATER*/
+
+/*.placeholders {
   margin-bottom: 30px;
   text-align: center;
 }
@@ -248,23 +250,38 @@ h2 {
 .placeholder img {
   display: inline-block;
   border-radius: 50%;
-}
+}*/
 
 /*
  * General styles
  */
-.centered {
+ /* Center information in the middle of the page */
+/* Not currently in use */
+/*.centered {
   position: fixed;
   top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
+  left: 40%;
+  transform: translateY(-50%);
+}*/
+
+
+/*
+ * Portfolio Styles
+ */
+.btn {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.project-info {
+  display: none;
 }
 
 
 /*
  * Media Queries
  */
- /* Medium Devices, Desktops */
+/* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   /* About Page */
   .top-margin {
@@ -274,12 +291,18 @@ h2 {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-  .centered {
+  /* Not currently in use */
+  /*.centered {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }*/
+
+  .sidebar ul {
+    font-size: 1.8rem;
   }
+
 }
 
 /* Extra Small Devices, Phones */
