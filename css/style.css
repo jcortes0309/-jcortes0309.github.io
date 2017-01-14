@@ -273,10 +273,25 @@ h2 {
   margin-bottom: 5px;
 }
 
+.project:hover .project-info {
+  display: block;
+}
+
+.project {
+  /*transition: transform 1s;*/
+}
+
+.project:hover {
+  /*transform: scale(2);*/
+}
+
 .project-info {
   display: none;
 }
 
+.project-image {
+  max-height: 300px;
+}
 
 /*
  * Media Queries
