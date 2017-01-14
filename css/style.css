@@ -286,12 +286,16 @@ h2 {
 }
 
 .project-info {
-  display: none;
+  display: block;
 }
 
 .project-image {
   max-height: 300px;
 }
+
+/* Flip Card Styles */
+
+
 
 /*
  * Media Queries
