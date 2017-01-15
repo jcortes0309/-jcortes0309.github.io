@@ -39,8 +39,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state({
     name: "experience",
     url: "/experience",
-    templateUrl: "../templates/experience.html",
-    controller: "ExperienceController"
+    templateUrl: "../templates/experience.html"
   })
   .state({
     name: "portfolio",
@@ -51,7 +50,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
     name: "contact",
     url: "/contact",
     templateUrl: "../templates/contact.html"
-  });
+  })
+  .state({
+    name: "get_cohort",
+    url: "/GetCohort",
+    templateUrl: "../templates/get_cohort.html"
+  })
+
+  ;
 
   $urlRouterProvider.otherwise('/');
 });

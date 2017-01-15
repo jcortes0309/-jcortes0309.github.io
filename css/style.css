@@ -273,12 +273,23 @@ h2 {
   margin-bottom: 5px;
 }
 
-.project:hover .project-info {
-  display: block;
+.portfolio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 
 .project {
-  /*transition: transform 1s;*/
+  max-width: 500px;
+  margin: 10px;
+  align-self: auto;
+}
+
+.project:hover .project-info {
+  display: block;
 }
 
 .project:hover {
@@ -293,8 +304,21 @@ h2 {
   max-height: 300px;
 }
 
-/* Flip Card Styles */
+/* Project Page Styles */
+.big-project {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
 
+.big-image {
+  max-width: 960px;
+  width: 100%;
+  margin-bottom: 15px;
+}
 
 
 /*
