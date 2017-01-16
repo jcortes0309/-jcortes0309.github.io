@@ -12,11 +12,19 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 
 var app = angular.module("personal_site", ['ui.router']);
 
-app.run(function($state) {
+app.run(function($state, $rootScope, $location, $window) {
  // Go to home page after the app is reloaded
   window.onload = function() {
-    // $state.go("home");
+    $state.go("home");
   };
+
+  // initialise google analytics
+  $window.ga('create', 'UA-XXXXXXXX-X', 'auto');
+
+  // record page view on each state change
+  $rootScope.$on('$stateChangeSuccess', function (event) {
+      $window.ga('send', 'pageview', $location.path());
+  });
 });
 
 app.controller("HomeController", function($scope, $state) {
