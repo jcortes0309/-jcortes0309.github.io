@@ -56,7 +56,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
     url: "/GetCohort",
     templateUrl: "../templates/get_cohort.html"
   })
-
+  .state({
+    name: "myelp",
+    url: "/mYelp",
+    templateUrl: "../templates/myelp.html"
+  })
   ;
 
   $urlRouterProvider.otherwise('/');
