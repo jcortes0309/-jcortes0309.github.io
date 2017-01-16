@@ -15,7 +15,7 @@ var app = angular.module("personal_site", ['ui.router']);
 app.run(function($state) {
  // Go to home page after the app is reloaded
   window.onload = function() {
-    // $state.go("home");
+    $state.go("home");
   };
 });
 
@@ -47,9 +47,19 @@ app.config(function($stateProvider, $urlRouterProvider) {
     templateUrl: "../templates/portfolio.html"
   })
   .state({
+    name: "other",
+    url: "/other",
+    templateUrl: "../templates/other.html"
+  })
+  .state({
     name: "contact",
     url: "/contact",
     templateUrl: "../templates/contact.html"
+  })
+  .state({
+    name: "mycrm",
+    url: "/MyCRM",
+    templateUrl: "../templates/my_crm.html"
   })
   .state({
     name: "get_cohort",
