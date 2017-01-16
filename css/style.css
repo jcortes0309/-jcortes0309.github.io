@@ -179,7 +179,7 @@ h2 {
   margin: auto;
   max-width: 500px;
   border-radius: 20px;
-  width: 100%;
+  width: 90%;
 }
 
 .about-column {
@@ -332,6 +332,11 @@ h2 {
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
+}
+
+.other-page {
+  max-width: 960px;
+  padding: 20px 40px;
 }
 
 /*

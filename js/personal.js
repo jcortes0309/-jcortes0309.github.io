@@ -15,7 +15,7 @@ var app = angular.module("personal_site", ['ui.router']);
 app.run(function($state) {
  // Go to home page after the app is reloaded
   window.onload = function() {
-    $state.go("home");
+    // $state.go("home");
   };
 });
 
@@ -70,6 +70,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
     name: "myelp",
     url: "/mYelp",
     templateUrl: "../templates/myelp.html"
+  })
+  .state({
+    name: "building_websites",
+    url: "/websites_101",
+    templateUrl: "../templates/building_websites_101.html"
   })
   ;
 
