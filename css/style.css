@@ -226,45 +226,6 @@ h2 {
   padding: 25px;
 }
 
-
-
-/*
- * Placeholder dashboard ideas
- */
-
-/*MIGHT DELETE LATER*/
-
-/*.placeholders {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.placeholders h4 {
-  margin-bottom: 0;
-}
-
-.placeholder {
-  margin-bottom: 20px;
-}
-
-.placeholder img {
-  display: inline-block;
-  border-radius: 50%;
-}*/
-
-/*
- * General styles
- */
- /* Center information in the middle of the page */
-/* Not currently in use */
-/*.centered {
-  position: fixed;
-  top: 50%;
-  left: 40%;
-  transform: translateY(-50%);
-}*/
-
-
 /*
  * Portfolio Styles
  */
@@ -283,7 +244,7 @@ h2 {
 }
 
 .project {
-  max-width: 500px;
+  max-width: 450px;
   margin: 10px;
   align-self: auto;
 }
