@@ -21,9 +21,9 @@ app.run(function($state, $rootScope, $location, $window) {
   // initialise google analytics
   $window.ga('create', 'UA-XXXXXXXX-X', 'auto');
 
-  // record page view on each state change
-  $rootScope.$on('$stateChangeSuccess', function (event) {
-      $window.ga('send', 'pageview', $location.path());
+  // track pageview on state change
+  $rootScope.$on('$locationChangeStart', function (event) {
+    $window.ga('send', 'pageview', $location.path());
   });
 });
 
